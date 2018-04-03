@@ -37,7 +37,7 @@ MatrixClient::MatrixClient(QString server, QObject *parent)
   : QNetworkAccessManager(parent)
   , clientApiUrl_{"/_matrix/client/r0"}
   , mediaApiUrl_{"/_matrix/media/r0"}
-  , serverProtocol_{"https"}
+  , serverProtocol_{"http"}
 {
         QSettings settings;
         txn_id_ = settings.value("client/transaction_id", 1).toInt();
